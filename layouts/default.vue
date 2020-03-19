@@ -53,7 +53,7 @@ export default {
     return {
       items:[
         {id:0, icon:"fa-dolar",text:"قیمت دلار", href:"/"},
-        {id:1, icon:"fa-gold",text:"قیمت طلا", href:"/gold"},
+        {id:1, icon:"fa-gold",text:"صفحه من", href:"/mypage"},
       ]
     }
   }
