@@ -56,6 +56,7 @@ export default {
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/axios',
+    '@nuxtjs/pwa',
   ],
   markdownit: {
     injected: true
