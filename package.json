@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@nuxtjs/axios": "^5.9.5",
     "@nuxtjs/markdownit": "^1.2.6",
     "nuxt": "^2.11.0"
   },

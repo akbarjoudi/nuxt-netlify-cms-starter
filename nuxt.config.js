@@ -4,6 +4,10 @@ export default {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'fa',
+      dir: 'rtl'
+    },
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -14,10 +18,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: '/css/bootstrap.rtl.min.css' },
+    ]
   },
   generate: {
-    routes: function() {
+    routes: function () {
       const fs = require('fs')
       return fs.readdirSync('./assets/content/blog').map(file => {
         return {
@@ -46,7 +53,10 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit'],
+  modules: [
+    '@nuxtjs/markdownit',
+    '@nuxtjs/axios',
+  ],
   markdownit: {
     injected: true
   },
@@ -57,6 +67,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   }
 }
